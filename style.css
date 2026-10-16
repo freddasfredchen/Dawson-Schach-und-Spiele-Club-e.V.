@@ -21,7 +21,6 @@ a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 6px; }
 .site-header { border-bottom: 1px solid var(--line); }
 .masthead { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 23px; }
 .brand { display: flex; gap: 12px; align-items: center; color: var(--fg); text-decoration: none; font-size: 25px; line-height: 1.1; font-weight: 900; letter-spacing: .1em; }
-.brand-mark { color: var(--pink); font-size: 49px; line-height: 1; }
 .brand-small { display: block; color: var(--muted); font-size: 11px; font-weight: 500; letter-spacing: .025em; margin-top: 7px; }
 nav { display: flex; flex-wrap: wrap; gap: 12px 28px; }
 nav a { color: var(--fg); font-size: 14px; text-decoration: none; padding-block: 6px; }
@@ -47,7 +46,6 @@ h1 { line-height: 1.04; letter-spacing: -.045em; }
 .orbit { position: absolute; width: 110%; height: 40%; left: -5%; top: 30%; border: 1px solid #ed95e46b; border-radius: 50%; transform: rotate(-35deg); }
 .orbit-two { transform: rotate(35deg); }
 .retro-board { position: absolute; bottom: -29%; left: -48%; width: 196%; height: 81%; transform: perspective(330px) rotateX(51deg) rotateZ(-9deg); background: repeating-conic-gradient(#75416a 0% 25%, #23152f 0% 50%) 0 0 / 74px 74px; border: 1px solid #ffb2e3; box-shadow: 0 0 30px #ff7bcb44; }
-.knight { position: absolute; z-index: 2; height: 77%; width: 77%; bottom: 7%; left: 12%; filter: drop-shadow(9px 10px 0 #100d2080) drop-shadow(0 0 15px #dc9cff55); transform: rotate(-6deg); }
 .art-star { position: absolute; color: var(--cyan); line-height: 1; }
 .star-one { top: 19%; right: 11%; font-size: 45px; }
 .star-two { left: 10%; top: 53%; font-size: 30px; }
@@ -110,7 +108,6 @@ footer p { margin: 0; }
   .masthead { flex-direction: column; padding-block: 18px 13px; gap: 14px; }
   .masthead nav { justify-content: start; gap: 26px; }
   .brand { font-size: 23px; }
-  .brand-mark { font-size: 44px; }
   .hero { grid-template-columns: 1fr; padding-block: 35px 36px; gap: 32px; }
   .hero h1 { font-size: clamp(48px, 13vw, 74px); }
   .eyebrow { font-size: 10px; margin-bottom: 22px; }
@@ -136,3 +133,20 @@ footer p { margin: 0; }
   .outline { color: var(--pink); -webkit-text-stroke: 0; }
   .content-section { padding-block: 20px; }
 }
+
+/* Das Vereinswappen bleibt unverändert; die Bühne trägt den Retro-Look. */
+.brand-logo { width: 82px; height: auto; flex: 0 0 auto; padding: 3px; background: #eee4ed; border: 1px solid #9b7597; border-radius: 3px; }
+.logo-art { background: radial-gradient(ellipse at 50% 40%, #faeff2 0%, #e5cfe9 66%, #a281b6 100%); }
+.logo-art .art-caption { color: #46263f; }
+.logo-art .sun { opacity: .55; box-shadow: none; }
+.logo-art .orbit { border-color: #854c8f70; }
+.logo-art .art-star { color: #69385c; }
+.hero-logo { position: absolute; z-index: 2; top: 5%; left: 0; width: 100%; height: 86%; object-fit: contain; filter: drop-shadow(0 8px 12px #27143828); }
+.logo-art .art-bottom { color: #fff4ff; }
+.legal-page header .brand { width: fit-content; margin-bottom: 28px; }
+@media (max-width: 760px) { .brand-logo { width: 70px; } }
+@media (max-width: 580px) {
+  .brand-logo { width: 66px; }
+  .hero .logo-art { order: -1; max-width: 430px; }
+}
+@media print { .brand-logo { width: 60px; } }
