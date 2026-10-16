@@ -135,7 +135,7 @@ footer p { margin: 0; }
 }
 
 /* Das Vereinswappen bleibt unverändert; die Bühne trägt den Retro-Look. */
-.brand-logo { display: block; width: 82px; max-width: 82px; height: auto; object-fit: contain; transform: none; flex: 0 0 auto; padding: 3px; background: #eee4ed; border: 1px solid #9b7597; border-radius: 3px; }
+.brand-logo { display: block; width: 82px; max-width: 82px; height: auto; object-fit: contain; transform: none; flex: 0 0 auto; padding: 0; background: transparent; border: 0; border-radius: 0; }
 .logo-art { background: radial-gradient(ellipse at 50% 40%, #faeff2 0%, #e5cfe9 66%, #a281b6 100%); }
 .logo-art .art-caption { color: #46263f; }
 .logo-art .sun { opacity: .55; box-shadow: none; }
@@ -150,3 +150,6 @@ footer p { margin: 0; }
   .hero .logo-art { order: -1; max-width: 430px; }
 }
 @media print { .brand-logo { width: 60px; } }
+
+.play-principles { border-top: 1px solid var(--line); padding-top: 24px; color: var(--muted); font-size: 15px; }
+.play-principles strong { color: var(--fg); }
