@@ -25,7 +25,7 @@ a:focus-visible { outline: 3px solid var(--cyan); outline-offset: 6px; }
 nav { display: flex; flex-wrap: wrap; gap: 12px 28px; }
 nav a { color: var(--fg); font-size: 14px; text-decoration: none; padding-block: 6px; }
 nav a:hover { text-decoration: underline; }
-.hero { display: grid; grid-template-columns: 1.14fr 1fr; align-items: center; gap: 42px; padding-block: 72px 64px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.14fr) minmax(0, 1fr); align-items: center; gap: 42px; padding-block: 72px 64px; }
 .eyebrow, .section-label { color: var(--cyan); text-transform: uppercase; letter-spacing: .15em; font: 700 12px/1.6 ui-monospace, monospace; }
 .eyebrow { margin: 0 0 24px; }
 .eyebrow span { color: var(--pink); margin-right: 5px; }
@@ -135,13 +135,13 @@ footer p { margin: 0; }
 }
 
 /* Das Vereinswappen bleibt unverändert; die Bühne trägt den Retro-Look. */
-.brand-logo { width: 82px; height: auto; flex: 0 0 auto; padding: 3px; background: #eee4ed; border: 1px solid #9b7597; border-radius: 3px; }
+.brand-logo { display: block; width: 82px; max-width: 82px; height: auto; object-fit: contain; transform: none; flex: 0 0 auto; padding: 3px; background: #eee4ed; border: 1px solid #9b7597; border-radius: 3px; }
 .logo-art { background: radial-gradient(ellipse at 50% 40%, #faeff2 0%, #e5cfe9 66%, #a281b6 100%); }
 .logo-art .art-caption { color: #46263f; }
 .logo-art .sun { opacity: .55; box-shadow: none; }
 .logo-art .orbit { border-color: #854c8f70; }
 .logo-art .art-star { color: #69385c; }
-.hero-logo { position: absolute; z-index: 2; top: 5%; left: 0; width: 100%; height: 86%; object-fit: contain; filter: drop-shadow(0 8px 12px #27143828); }
+.hero-logo { display: block; max-width: 100%; transform: none; position: absolute; z-index: 2; top: 5%; left: 0; width: 100%; height: 86%; object-fit: contain; filter: drop-shadow(0 8px 12px #27143828); }
 .logo-art .art-bottom { color: #fff4ff; }
 .legal-page header .brand { width: fit-content; margin-bottom: 28px; }
 @media (max-width: 760px) { .brand-logo { width: 70px; } }
