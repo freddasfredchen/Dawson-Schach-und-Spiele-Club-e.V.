@@ -72,8 +72,6 @@ dt:nth-of-type(5), dd:nth-of-type(5) { color: var(--cyan); font-weight: 750; }
 footer { padding-block: 32px 38px; color: var(--muted); font-size: 12px; }
 .footer-brand { display: block; color: var(--pink); font-size: 20px; font-weight: 850; letter-spacing: .13em; margin-bottom: 9px; }
 footer p { margin: 0; }
-.legal-page header { padding-block: 36px 26px; border-bottom: 1px solid var(--line); }
-.legal-page header h1 { font-size: clamp(30px, 6vw, 54px); margin: 0 0 20px; overflow-wrap: anywhere; }
 .legal-page main { padding-top: 32px; padding-bottom: 30px; }
 .legal-page main h2 { color: var(--pink); font-size: 23px; margin-top: 32px; }
 .legal-page main p { max-width: 850px; overflow-wrap: anywhere; }
@@ -143,7 +141,6 @@ footer p { margin: 0; }
 .logo-art .art-star { color: #69385c; }
 .hero-logo { display: block; max-width: 100%; transform: none; position: absolute; z-index: 2; top: 5%; left: 0; width: 100%; height: 86%; object-fit: contain; filter: drop-shadow(0 8px 12px #27143828); }
 .logo-art .art-bottom { color: #fff4ff; }
-.legal-page header .brand { width: fit-content; margin-bottom: 28px; }
 @media (max-width: 760px) { .brand-logo { width: 70px; } }
 @media (max-width: 580px) {
   .brand-logo { width: 66px; }
@@ -153,3 +150,23 @@ footer p { margin: 0; }
 
 .play-principles { border-top: 1px solid var(--line); padding-top: 24px; color: var(--muted); font-size: 15px; }
 .play-principles strong { color: var(--fg); }
+
+/* Mehrseitiger Aufbau (2026-10-24): Seitenkopf, aktive Navigation, Startseiten-Kacheln, Charity ID im Fuß. */
+nav a[aria-current="page"] { color: var(--pink); text-decoration: underline; text-decoration-thickness: 2px; }
+.page-head { padding-block: 48px 8px; border-bottom: 1px solid var(--line); }
+.page-head h1 { font-size: clamp(36px, 6vw, 62px); margin: 0 0 12px; overflow-wrap: anywhere; }
+.page-head .en { margin-top: 8px; }
+.teasers { list-style: none; padding: 0; margin: 32px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.teasers a { display: block; height: 100%; background: var(--card); border: 1px solid #67405f; border-top: 3px solid var(--pink); padding: 22px 24px; color: var(--muted); text-decoration: none; font-size: 15px; }
+.teasers li:nth-child(2) a { border-top-color: var(--cyan); }
+.teasers li:nth-child(3) a { border-top-color: #c3a1ff; }
+.teasers a:hover { border-color: var(--cyan); }
+.teasers strong { display: block; color: var(--fg); font-size: 20px; margin: 4px 0 10px; }
+.teasers .section-label { display: block; margin: 0; }
+.en-inline { display: block; margin-top: 8px; font-size: 13px; }
+dl.plain dt, dl.plain dd { color: inherit; font-weight: inherit; }
+dl.plain dt { color: var(--muted); }
+footer { border-top: 1px solid var(--line); }
+.footer-id { margin-bottom: 8px; color: var(--fg); font-size: 13px; }
+.footer-id strong { color: var(--cyan); }
+@media (max-width: 760px) { .teasers { grid-template-columns: 1fr; } .page-head { padding-top: 32px; } }
